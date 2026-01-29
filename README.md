@@ -1,32 +1,36 @@
-First stable version.
+# CSV Library (v1.0.0)
 
+This is a simple Java library designed to handle CSV operations using a wrapper structure. 
 
+> [!NOTE]
+> I am new to GitHub and learning the ropes! This is the first stable version of the library.
 
-I am very new to GitHub, so I may make errors.
+## 🛠 Features
 
+The library consists of three main components:
 
-There are 3 extra classes in this library. CSVWrapper holds a List<List<String>> object inside. Methods include:
+### 1. `CSVWrapper`
+This is the core data structure. It manages a `List<List<String>>` and ensures your header remains protected.
 
+* **Constructor**: Requires a `List<String>` to define the CSV header.
+* **Key Methods**:
+    * `addElement(List<String>)`: Adds a new row.
+    * `addElement(List<String>, int index)`: Inserts a row at a specific index.
+    * `delElement(int index)`: Deletes a row.
+    * `modifyElement(int row, int col, String value)`: Updates a specific "attribute."
+    * `getCSVStructure()`: Returns the raw data list.
 
+### 2. `CSVReader`
+Converts a physical file into a `CSVWrapper` object.
+* **Usage**: Pass a `BufferedReader` into the constructor and call `.read()`.
 
+### 3. `CSVWriter`
+Saves a `CSVWrapper` object back to a file.
+* **Usage**: Pass a `BufferedWriter` into the constructor and call `.write(CSVWrapper csv)`.
 
-addElement(List<String>) to add a row
-addElement(List<String>, int index) to add a row at a specefic index (may throw ElementBeforeHeaderException or InvalidElementIndex)
-delElement(int index) deletes a row (may throw DeleteHeaderException)
-modifyElement(int elementIndex, int attributeIndex, String attribute) modifies a value (or like I call them: attributes) inside a row (may throw ModifyHeaderException)
-List<String> getElement(int index) returns a List<String> object (may throw InvalidElementIndex)
-List<List<String>> getCSVStructure() returns the actual list of lists the wrapper uses
-CSVWrapper requires a List<String> for the CSV header inside the constructor
-
-
-
-
-
-
-
-CSVReader returns a CSVWrapper object when the .read() method is called. The constructor requires a BufferedReader object.
-
-
-
-
-CSVWriter writes to the .csv files using the .write(CSVWrapper csv) method. The constructor requires a BufferedWriter object.
+## ⚠️ Exceptions
+The library includes custom safety checks to prevent you from accidentally deleting or modifying your header:
+* `ElementBeforeHeaderException`
+* `InvalidElementIndex`
+* `DeleteHeaderException`
+* `ModifyHeaderException`
