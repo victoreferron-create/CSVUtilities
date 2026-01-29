@@ -3,7 +3,7 @@
 This is a simple Java library designed to handle CSV operations using a wrapper structure. 
 
 > [!NOTE]
-> I am new to GitHub and learning the ropes! This is the first stable version of the library.
+> I am new to GitHub and may do errors. This is the first stable version of the library.
 
 ## 🛠 Features
 
