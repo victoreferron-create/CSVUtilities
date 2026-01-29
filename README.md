@@ -1,1 +1,1 @@
-First stable version!
+First stable version
