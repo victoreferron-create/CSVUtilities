@@ -54,4 +54,8 @@ public class CSVWrapper {
             throw new InvalidElementIndex("Element index is out of bounds!");
         }
     }
+
+    public List<List<String>> getCSVStructure() {
+        return this.CSVStructure;
+    }
 }
