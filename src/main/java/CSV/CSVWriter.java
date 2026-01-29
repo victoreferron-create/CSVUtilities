@@ -1,7 +1,7 @@
 package CSV;
 
-import javax.lang.model.element.NestingKind;
 import java.io.BufferedWriter;
+import java.io.IOException;
 import java.util.List;
 
 public class CSVWriter {
@@ -12,7 +12,6 @@ public class CSVWriter {
     }
 
     public void write(CSVWrapper csv) {
-        for (List<String> csv_structure : csv.getCSVStructure()) {
 
         try {
             for (List<String> csv_element : csv.getCSVStructure()) {
