@@ -31,7 +31,7 @@ public class CSVWrapper {
     public void addElement(List<String> element) {
         addElement(element, CSVStructure.size());
     }
-
+    
     public void delElement(int index) {
         if (index == 0) {
             throw new DeleteHeaderException("Can not delete the CSV header!");
