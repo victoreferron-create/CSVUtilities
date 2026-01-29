@@ -29,4 +29,4 @@ CSVReader returns a CSVWrapper object when the .read() method is called. The con
 
 
 
-CSVWriter writes to the .csv files using the .write(CSVWrapper csv) method. Their constructor requires a BufferedWriter.
+CSVWriter writes to the .csv files using the .write(CSVWrapper csv) method. The constructor requires a BufferedWriter.
