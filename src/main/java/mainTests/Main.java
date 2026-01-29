@@ -2,8 +2,10 @@ package mainTests;
 
 import CSV.CSVReader;
 import CSV.CSVWrapper;
+import CSV.CSVWriter;
 
 import java.io.*;
+import java.util.List;
 
 
 public class Main {
@@ -11,14 +13,12 @@ public class Main {
 
         File file = new File("C:\\Users\\victo\\OneDrive\\Desktop\\test.csv");
 
-        CSVReader csvreader = new CSVReader(new BufferedReader(new FileReader(file)));
+        CSVWrapper csv = new CSVWrapper(List.of("user name", "email"));
 
-        CSVWrapper csv = csvreader.read();
+        csv.addElement(List.of("Victor Emmanuel Ferron", "victor.e.ferron@gmail.com"));
 
-        System.out.println(csv.getElement(1));
+        CSVWriter csvWriter = new CSVWriter(new BufferedWriter(new FileWriter(file)));
 
-        csv.modifyElement(1, 1, "13");
-
-        System.out.println(csv.getElement(1));
+        csvWriter.write(csv);
     }
 }

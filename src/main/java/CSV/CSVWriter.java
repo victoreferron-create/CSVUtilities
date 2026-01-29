@@ -17,9 +17,9 @@ public class CSVWriter {
             for (List<String> csv_element : csv.getCSVStructure()) {
                 writer.write(String.join(",", csv_element));
                 writer.newLine();
-                writer.close();
             }
             writer.flush();
+            writer.close();
         } catch (IOException e) {
             System.err.println("Error: Could not write to CSV file. " + e.getMessage());
         }
