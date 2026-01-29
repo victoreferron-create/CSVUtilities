@@ -11,9 +11,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) throws IOException {
 
-        File file = new File("C:\\Users\\victo\\OneDrive\\Desktop\\test.csv");
-
-        CSVWrapper csv = new CSVWrapper(List.of("user name", "email"));
+        File file = new File("C:\\Users\\victo\\test.csv");
 
 
     }
