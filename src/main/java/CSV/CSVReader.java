@@ -15,8 +15,22 @@ public class CSVReader {
     public CSVWrapper read() throws IOException {
 
         String header_string = reader.readLine();
+        CSVWrapper csv;
 
-        CSVWrapper csv = new CSVWrapper(new ArrayList<String>(List.of(header_string.split(","))));
+
+
+        if (header_string != null) {
+
+            if (header_string.isBlank()) {
+                return null;
+            }
+            csv = new CSVWrapper(new ArrayList<String>(List.of(header_string.split(","))));
+        } else {
+            return null;
+        }
+
+
+
 
         String line;
         while ((line = reader.readLine()) != null) {
