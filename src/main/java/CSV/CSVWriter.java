@@ -1,6 +1,4 @@
-package CSV.Exceptions;
-
-import CSV.CSVWrapper;
+package CSV;
 
 import java.io.BufferedWriter;
 
