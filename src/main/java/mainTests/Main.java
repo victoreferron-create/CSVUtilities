@@ -15,10 +15,6 @@ public class Main {
 
         CSVWrapper csv = new CSVWrapper(List.of("user name", "email"));
 
-        csv.addElement(List.of("Victor Emmanuel Ferron", "victor.e.ferron@gmail.com"));
 
-        CSVWriter csvWriter = new CSVWriter(new BufferedWriter(new FileWriter(file)));
-
-        csvWriter.write(csv);
     }
 }
