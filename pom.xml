@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>me.greywolfy</groupId>
-    <artifactId>CSVWriterProject</artifactId>
+    <groupId>me.victorferron-create</groupId>
+    <artifactId>CSVUtilities</artifactId>
     <version>1.0</version>
 
     <properties>
