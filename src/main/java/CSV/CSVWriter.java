@@ -13,7 +13,7 @@ public class CSVWriter {
 
     public void write(CSVWrapper csv) {
         for (List<String> csv_structure : csv.getCSVStructure()) {
-            // incomplete // this comment was added on GitHub.
+            // incomplete
         }
     }
 }
