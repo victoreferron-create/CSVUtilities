@@ -5,6 +5,4 @@ public class DeleteHeaderException extends RuntimeException {
         super(message);
     }
 
-
-    // added inside a new branch!
 }
